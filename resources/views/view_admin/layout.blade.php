@@ -11,7 +11,7 @@
 </head>
 <body>
 	<br>
-	<h1 id="not-print"><center>Selamat Datang di Kursus Online Edugi</center></h1><br>
+	<h1 id="not-print"><center>CRUD LARAVEL MYSQL</center></h1><br>
 	<div class="container">
 		@yield('content')
 	</div>  

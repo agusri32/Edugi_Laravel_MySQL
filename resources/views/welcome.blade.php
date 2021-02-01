@@ -97,9 +97,5 @@
             </div>
         </div>
 		
-		@foreach($guest as $row)
-		<span style="color:black">{{$row->nama}}</span><br>
-		@endforeach
-		
     </body>
 </html>
