@@ -15,7 +15,7 @@ return [
     |
     */
 
-    'default' => env('DB_CONNECTION', 'oracle'),
+    'default' => env('DB_CONNECTION', 'mysql'),
 
     /*
     |--------------------------------------------------------------------------
@@ -34,21 +34,6 @@ return [
     */
 
     'connections' => [
-		
-		'oracle' => [
-			'driver'         => 'oracle',
-			'tns'            => env('DB_TNS', '(DESCRIPTION=(ADDRESS = (PROTOCOL = TCP)(HOST = "localhost")(PORT = "1521"))(CONNECT_DATA=(SID=xe)))'),
-			'host'           => env('DB_HOST', ''),
-			'port'           => env('DB_PORT', ''),
-			'database'       => env('DB_DATABASE', 'imtiyaz'),
-			'username'       => env('DB_USERNAME', 'imtiyaz'),
-			'password'       => env('DB_PASSWORD', 'bismillah'),
-			'charset'        => env('DB_CHARSET', 'AL32UTF8'),
-			'prefix'         => env('DB_PREFIX', ''),
-			'prefix_schema'  => env('DB_SCHEMA_PREFIX', ''),
-			'edition'        => env('DB_EDITION', 'ora$base'),
-			'server_version' => env('DB_SERVER_VERSION', '11g'),
-		],
 		
         'sqlite' => [
             'driver' => 'sqlite',
