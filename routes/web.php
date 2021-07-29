@@ -1,5 +1,7 @@
 <?php
 
+use Illuminate\Support\Facades\Route;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -11,8 +13,16 @@
 |
 */
 
+/*
 Route::get('/', function () {
     return view('welcome');
 });
+*/
 
 Route::resource('admin', 'AdminController');
+
+Route::get('dropdown', 'DropdownController@index')
+    ->name('dropdown.index');
+	
+Route::post('dropdown', 'DropdownController@store')
+    ->name('dropdown.store');

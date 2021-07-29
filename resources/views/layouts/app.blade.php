@@ -7,7 +7,7 @@
 <html>
 <head>
     <title>Home</title>
-    <link rel="stylesheet" href="{{asset('bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
 </head>
 <body>
 	<br>
@@ -17,3 +17,7 @@
 	</div>  
 </body>
 </html>
+
+ <!-- Scripts -->
+<script src="{{ asset('js/app.js') }}"></script>
+@stack('scripts')
