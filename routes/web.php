@@ -13,11 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/*
 Route::get('/', function () {
     return view('welcome');
 });
-*/
 
 Route::resource('admin', 'AdminController');
 
@@ -26,3 +24,6 @@ Route::get('dropdown', 'DropdownController@index')
 	
 Route::post('dropdown', 'DropdownController@store')
     ->name('dropdown.store');
+	
+Auth::routes();
+Route::get('/home', 'HomeController@index')->name('home');
