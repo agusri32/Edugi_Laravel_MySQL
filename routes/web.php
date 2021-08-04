@@ -21,11 +21,11 @@ Route::get('/', function () {
 Route::resource('admin', 'AdminController');
 
 //untuk form dropdown alamat
-Route::get('dropdown', 'DropdownController@index')
-    ->name('dropdown.index');
-	
-Route::post('dropdown', 'DropdownController@store')
-    ->name('dropdown.store');
+Route::get('dropdown',     'DropdownController@index')->name('dropdown.index');
+Route::post('/carikota',   'DropdownController@carikota');
+Route::post('/caricamat',  'DropdownController@caricamat');
+Route::post('/carilurah',  'DropdownController@carilurah');
+Route::post('/prosesdata', 'DropdownController@prosesdata');
 
 //untuk registration, login, home
 Auth::routes();
