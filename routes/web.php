@@ -29,7 +29,7 @@ Route::get('/browse',  'Select2Controller@browse');
 //untuk focm combobox
 Route::get('combobox',		'ComboboxController@index');
 Route::get('/getkecamatan', 'ComboboxController@getKecamatan');
-Route::get('/getdesa',   	'ComboboxController@getDesa');
+Route::get('/getkelurahan', 'ComboboxController@getKelurahan');
 
 //untuk form dropdown
 Route::get('dropdown',     'DropdownController@index')->name('dropdown.index');

@@ -5,7 +5,7 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 
-class Desa extends Model
+class Kelurahan extends Model
 {
     use Notifiable;
     protected $table = 'tbl_desa';

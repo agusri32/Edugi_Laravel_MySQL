@@ -6,7 +6,7 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                    Form Dinamis
+                    Form Dinamis dengan Ajax
                 </div>
 
                 <div class="card-body">
@@ -14,11 +14,11 @@
 					@csrf
 						<div class="row mb-3">
 							<div class="col-3">
-								<label  class="form-label">Kabupaten</label>
+								<label  class="form-label">Kabupaten / Kota</label>
 							</div>
 							<div class="col-9">
-								<select class="form-control" name="kabupaten" id="kabupaten">
-									<option selected>---Pilih Kabupaten/Kota---</option>
+								<select class="form-control" name="kota" id="kota">
+									<option selected>== Pilih Kabupaten / Kota ==</option>
 									@foreach ($kabupaten as $r_kab)
 									<option  value="{{$r_kab->kab_kode}}">{{$r_kab->kab_nama}}</option>
 									@endforeach
@@ -32,18 +32,18 @@
 							</div>
 							<div class="col-9">
 								<select class="form-control" name="kecamatan" id="kecamatan">
-									<option selected>---Pilih Kecamatan---</option>
+									<option selected>== Pilih Kecamatan ==</option>
 								</select>
 							</div>
 						</div>
 
 						<div class="row mb-3">
 							<div class="col-3">
-								<label  class="form-label">Desa</label>
+								<label  class="form-label">Kelurahan / Desa</label>
 							</div>
 							<div class="col-9">
-								<select class="form-control" name="desa" id="desa">
-									<option selected>---Pilih Desa---</option>
+								<select class="form-control" name="kelurahan" id="kelurahan">
+									<option selected>== Pilih Kelurahan / Desa ==</option>
 								</select>
 							</div>
 						</div>
@@ -60,8 +60,7 @@
 <script>
 $(function () {
 	
-	//Lokasi: public/wilayah.js
-	$('#kabupaten').change(function(){
+	$('#kota').change(function(){
     var kabID = $(this).val();    
     if(kabID){
         $.ajax({
@@ -71,21 +70,18 @@ $(function () {
            success:function(res){               
             if(res){
                 $("#kecamatan").empty();
-                $("#desa").empty();
-                $("#kecamatan").append('<option>---Pilih Kecamatan---</option>');
-                $("#desa").append('<option>---Pilih Desa---</option>');
                 $.each(res,function(nama,kode){
                     $("#kecamatan").append('<option value="'+kode+'">'+nama+'</option>');
                 });
             }else{
                $("#kecamatan").empty();
-               $("#desa").empty();
+               $("#kelurahan").empty();
             }
            }
         });
     }else{
         $("#kecamatan").empty();
-        $("#desa").empty();
+        $("#kelurahan").empty();
     }  
    });
 
@@ -94,22 +90,21 @@ $(function () {
     if(kecID){
         $.ajax({
            type:"GET",
-           url:"{{ config('app.url') }}/getdesa?kecID="+kecID,
+           url:"{{ config('app.url') }}/getkelurahan?kecID="+kecID,
            dataType: 'JSON',
            success:function(res){               
             if(res){
-                $("#desa").empty();
-                $("#desa").append('<option>---Pilih Desa---</option>');
+                $("#kelurahan").empty();
                 $.each(res,function(nama,kode){
-                    $("#desa").append('<option value="'+kode+'">'+nama+'</option>');
+                    $("#kelurahan").append('<option value="'+kode+'">'+nama+'</option>');
                 });
             }else{
-               $("#desa").empty();
+               $("#kelurahan").empty();
             }
            }
         });
     }else{
-        $("#desa").empty();
+        $("#kelurahan").empty();
     }      
    });
    

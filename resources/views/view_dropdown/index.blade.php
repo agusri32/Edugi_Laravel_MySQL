@@ -6,17 +6,17 @@
         <div class="col-md-8">
             <div class="card">
                 <div class="card-header">
-                    Dependent Dropdown Demo
+                    From Dinamis dengan Laravolt
                 </div>
 
                 <div class="card-body">
                     <form method="post" action="{{ config('app.url') }}/prosesdata">
 					@csrf
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label">Provinsi</label>
-                            <div class="col-md-6">
+                            <label for="name" class="col-md-3 col-form-label">Provinsi</label>
+                            <div class="col-md-9">
                                 <select name="provinsi" id="provinsi" class="form-control">
-                                    <option value="">== Select Provinsi ==</option>
+                                    <option value="">== Pilih Provinsi ==</option>
                                     @foreach ($provinsi as $id => $name)
                                         <option value="{{ $id }}">{{ $name }}</option>
                                     @endforeach
@@ -25,28 +25,28 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label">Kota</label>
-                            <div class="col-md-6">
+                            <label for="name" class="col-md-3 col-form-label">Kabupaten / Kota</label>
+                            <div class="col-md-9">
                                 <select name="kota" id="kota" class="form-control">
-                                    <option value="">== Select Kota ==</option>
+                                    <option value="">== Pilih Kabupaten / Kota ==</option>
                                 </select>
                             </div>
                         </div>
 						
 						<div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label">Kecamatan</label>
-                            <div class="col-md-6">
+                            <label for="name" class="col-md-3 col-form-label">Kecamatan</label>
+                            <div class="col-md-9">
                                 <select name="kecamatan" id="kecamatan" class="form-control">
-                                    <option value="">== Select Kecamatan ==</option>
+                                    <option value="">== Pilih Kecamatan ==</option>
                                 </select>
                             </div>
                         </div>
 						
 						<div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label">Kelurahan</label>
-                            <div class="col-md-6">
+                            <label for="name" class="col-md-3 col-form-label">Kelurahan / Desa</label>
+                            <div class="col-md-9">
                                 <select name="kelurahan" id="kelurahan" class="form-control">
-                                    <option value="">== Select Kelurahan ==</option>
+                                    <option value="">== Pilih Kelurahan / Desa ==</option>
                                 </select>
                             </div>
                         </div>

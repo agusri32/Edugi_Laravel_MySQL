@@ -1,9 +1,8 @@
 <?php
-//Lokasi File: app/Http/Controllers/HomeController.php
 namespace App\Http\Controllers;
 use App\Kabupaten;
 use App\Kecamatan;
-use App\Desa;
+use App\Kelurahan;
 use Illuminate\Http\Request;
 
 class ComboboxController extends Controller
@@ -16,8 +15,8 @@ class ComboboxController extends Controller
         $kecamatan = Kecamatan::where("kec_kab",$request->kabID)->pluck('kec_kode','kec_nama');
         return response()->json($kecamatan);
     }
-    public function getDesa(Request $request){
-        $desa = Desa::where("desa_kec",$request->kecID)->pluck('desa_kode','desa_nama');
-        return response()->json($desa);
+    public function getKelurahan(Request $request){
+        $kelurahan = kelurahan::where("desa_kec",$request->kecID)->pluck('desa_kode','desa_nama');
+        return response()->json($kelurahan);
     }
 }
