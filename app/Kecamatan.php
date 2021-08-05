@@ -8,12 +8,12 @@ use Illuminate\Notifications\Notifiable;
 class Kecamatan extends Model
 {
     use Notifiable;
-    protected $table = 'tbl_kecamatan';
+    protected $table = 'indonesia_districts';
     protected $fillable = [
-        'kec_nama',
-        'kec_kab'
+        'name',
+        'city_id'
     ];
-    protected $primaryKey = 'kec_kode';
+    protected $primaryKey = 'id';
     public $incrementing = false;
     protected $keyType = 'string';
 }

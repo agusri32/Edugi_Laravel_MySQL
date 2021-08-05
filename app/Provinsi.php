@@ -5,13 +5,12 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Notifications\Notifiable;
 
-class Kabupaten extends Model
+class Provinsi extends Model
 {
     use Notifiable;
-    protected $table = 'indonesia_cities';
+    protected $table = 'indonesia_provinces';
     protected $fillable = [
-        'name',
-        'province_id'
+        'name'
     ];
     protected $primaryKey = 'id';
     public $incrementing = false;

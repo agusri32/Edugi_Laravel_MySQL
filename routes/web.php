@@ -28,6 +28,7 @@ Route::get('/browse',  'Select2Controller@browse');
 
 //untuk focm combobox
 Route::get('combobox',		'ComboboxController@index');
+Route::get('/getkabupaten', 'ComboboxController@getKabupaten');
 Route::get('/getkecamatan', 'ComboboxController@getKecamatan');
 Route::get('/getkelurahan', 'ComboboxController@getKelurahan');
 

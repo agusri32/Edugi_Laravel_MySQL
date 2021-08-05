@@ -48,10 +48,10 @@ class DropdownController extends Controller
     {
         echo "ID Provinsi : ".$request->get('provinsi');
 		echo "<br>";
-		echo "ID Kota : ".$request->get('kota');
+		echo "ID Kabupaten / Kota : ".$request->get('kabupaten');
 		echo "<br>";
 		echo "ID Kecamatan : ".$request->get('kecamatan');
 		echo "<br>";
-		echo "ID Kelurahan : ".$request->get('kelurahan');
+		echo "ID Kelurahan / Desa : ".$request->get('kelurahan');
     }
 }

@@ -8,12 +8,12 @@ use Illuminate\Notifications\Notifiable;
 class Kelurahan extends Model
 {
     use Notifiable;
-    protected $table = 'tbl_desa';
+    protected $table = 'indonesia_villages';
     protected $fillable = [
-        'desa_nama',
-        'desa_kec'
+        'name',
+        'district_id'
     ];
-    protected $primaryKey = 'desa_kode';
+    protected $primaryKey = 'id';
     public $incrementing = false;
     protected $keyType = 'string';
 }
