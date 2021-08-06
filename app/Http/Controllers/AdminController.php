@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\AdminModel;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Crypt;
 
 class AdminController extends Controller
 {

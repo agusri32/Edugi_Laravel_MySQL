@@ -38,3 +38,6 @@ Route::post('/carikota',   'DropdownController@carikota');
 Route::post('/caricamat',  'DropdownController@caricamat');
 Route::post('/carilurah',  'DropdownController@carilurah');
 Route::post('/prosesdata', 'DropdownController@prosesdata');
+
+//untuk download file
+Route::get('/download/{id}', 'DownloadController@files');

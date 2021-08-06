@@ -46,4 +46,8 @@
     </tbody>
 	</table>
 	
+	<a href="{{ config('app.url') }}/download/{{ Crypt::encryptString('../storage/fileuser/html.pdf') }}" class="btn btn-primary btn-rounded btn-fw" target="_blank" title="File yang telah terupload">
+	<i class="fa fa-download"></i><font face="verdana" size="2">Download File</font>
+	</a>
+	
 @endsection
